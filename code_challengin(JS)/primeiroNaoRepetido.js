@@ -1,0 +1,19 @@
+function primeiroNaoRepetido(texto){
+    letras = [...texto] //transformando texto em array usando o destruct
+    letraNotRept = []
+    arrRept = []
+    for( let i = 0; i <= letras.length; i++ ){
+        if( arrRept.length == 0 ){
+            arrRept.push(letras[i])
+        }else if( arrRept.length > 0 && arrRept.includes(letras[i]) ){
+            arrRept.push(letras[i])
+        }else if( !arrRept.includes(letras[i]) && letraNotRept.length == 0 ){
+            letraNotRept.push(letras[i])
+        }else if( !arrRept.includes(letras[i]) && letraNotRept.includes(letras[i]) ){
+            letraNotRept = []
+        }else{
+            continue
+        }
+    }
+    console.log(letraNotRept[0] ?? null)
+}
