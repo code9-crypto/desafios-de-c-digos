@@ -1,5 +1,8 @@
 package contaVogais;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import java.util.Scanner;
 
 public class contaVogais {
@@ -12,8 +15,11 @@ public class contaVogais {
 	}
 
 	public static void contaVogais(String txt) {
-		int counter = 0;		
+		int counter = 0;
 		char[] vogais = { 'a', 'e', 'i', 'o', 'u', 'ã', 'õ' };
+		//String[] arrLetras = txt.split("");
+		//Arrays.sort(arrLetras);
+		//System.out.println(arrLetras);
 		char[] arrLetras = txt.toCharArray();
 		for(char ltr : arrLetras) {
 			for( char v : vogais ) {
