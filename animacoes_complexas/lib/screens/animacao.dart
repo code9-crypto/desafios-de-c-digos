@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../classes/animated_logo.dart';
+
 class Animacao extends StatefulWidget {
   const Animacao({super.key});
 
@@ -23,14 +25,20 @@ class _AnimacaoState extends State<Animacao> with SingleTickerProviderStateMixin
     );
 
     //A variável animation está recebendo a classe Tween, onde essa classe vai variar entre 0 e 300, mas com o controle da variavel controller
-    animation = Tween<double>(begin: 0, end: 300).animate(controller);
+    //OBS.: aqui estamos usando o efeito cascata, ou seja, usando os métodos sem ficar repetindo o nome da variável
+    //E como a gente está usando uma classe separada, a qual foi herdada pela classe AnimatedWidget, não será necessário o addListener com o setState
+    animation = Tween<double>(begin: 0, end: 300).animate(controller);/*..addListener((){ //este listener ficará escutando quando a animação tiver alteração no valor para depois redesenhar a tela
+      setState(() {
 
-    //este listener ficará escutando quando a animação tiver alteração valor para depois redesenhar a tela
+      });
+    });*/
+
+    /*//este listener ficará escutando quando a animação tiver alteração valor para depois redesenhar a tela
     animation.addListener((){
       setState(() {
 
       });
-    });
+    });*/
 
     //Iniciando a animação
     controller.forward();
@@ -45,14 +53,6 @@ class _AnimacaoState extends State<Animacao> with SingleTickerProviderStateMixin
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Container(
-        //Essa altura e largura serão alteradas de 0 até 300 com base na variável animation
-        height: animation.value,
-        width: animation.value,
-        child: FlutterLogo(),
-        // child: Icon(Icons.heart_broken, color: Colors.white70, size: animation.value,), É POSSÍVEL FAZER TAMBÉM COM ÍCONES DESTE JEITO
-      ),
-    );
+    return AnimatedLogo<Animation<double>>(animation);
   }
 }
