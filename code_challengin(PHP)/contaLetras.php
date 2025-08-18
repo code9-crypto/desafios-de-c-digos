@@ -23,7 +23,7 @@
 
 //🔹 Versão ajustada e um pouco mais compacta:
 function contarLetras($palavra){
-    $arrPal = str_split(strtolower(preg_replace("/[^a-z]/", "", $palavra)));
+    $arrPal = str_split(strtolower(preg_replace("/[^a-z]/", "", $palavra))); //aqui verifica os caracteres especiais e pontuação e troca por nada
     $encontrado = [];
     foreach($arrPal as $ltr){
         //(tudo numa linha só) caso a chave não esteja setada, então será criada mas com o valor 0 + 1; caso contrário,
