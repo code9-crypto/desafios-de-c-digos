@@ -25,7 +25,7 @@ function contarVogais($texto){
     $encontradas = [];
 
     foreach (str_split(strtolower($texto)) as $letra) { //aqui estou fazendo um único loop com forEach e já colocando o str_split e o strtolower
-        if (in_array($letra, $vogais)) {
+        if (in_array($letra, $vogais)) {//aqui verifica cada letra do texto(que foi separado em array) confere com array de vogais
             $encontradas[] = $letra;
             $counter++;
         }
