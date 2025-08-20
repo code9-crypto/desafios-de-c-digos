@@ -12,7 +12,7 @@ function contarPalavras(frase) {
 
     // 4. Percorrer as palavras e contar
     for (const palavra of palavras) {
-        contagem[palavra] = (contagem[palavra] || 0) + 1; //Se a palavra já existe incrementa  +1, se não inicia com 1
+        contagem[palavra] = (contagem[palavra] ?? 0) + 1; //Se a palavra já existe incrementa  +1, se não inicia com 1
     }
 
     return contagem;

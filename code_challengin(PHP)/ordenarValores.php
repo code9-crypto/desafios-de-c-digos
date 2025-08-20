@@ -1,5 +1,6 @@
 <?php
 
+//ESTE É O CÓDIGO DO BUBBLE SORT
 function ordenaValores($numeros){
     for( $i = 0; $i < count($numeros); $i++ ){
         for( $j = 0; $j < count($numeros)-1; $j++ ){

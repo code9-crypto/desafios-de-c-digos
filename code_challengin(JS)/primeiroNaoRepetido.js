@@ -1,4 +1,4 @@
-function primeiroNaoRepetido(texto){
+/*function primeiroNaoRepetido(texto){
     letras = [...texto] //transformando texto em array usando o destruct
     letraNotRept = []
     arrRept = []
@@ -16,4 +16,28 @@ function primeiroNaoRepetido(texto){
         }
     }
     console.log(letraNotRept[0] ?? null)
+}*/
+
+//VERSÃO OTIMIZADA E LIMPA
+function primeiroNaoRepetido(texto) {
+    const letras = texto.split("");
+    const freq = {};
+
+    // 1. Conta a frequência de cada letra
+    for (let l of letras) {
+        freq[l] = (freq[l] ?? 0) + 1;
+    }
+
+    // 2. Retorna a primeira letra que aparece só 1 vez
+    for (let l of letras) {
+        if (freq[l] === 1) {
+            return l;
+        }
+    }
+
+    return null; // caso nenhuma letra seja única
 }
+
+console.log(primeiroNaoRepetido("abacaxi"));  // b
+console.log(primeiroNaoRepetido("aabbcc"));   // null
+console.log(primeiroNaoRepetido("javascript")); // j
