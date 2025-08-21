@@ -12,9 +12,9 @@ public class PalavraLonga {
 		int maior = palavras[0].length(); //assume que a primeira palavra é a maior
 		String plv = palavras[0]; //o texto da plavra
 		for( String palavra : palavras ) {
-			if( palavra.length() > maior ) { //aqui verifica se o tamnho 
-				maior = palavra.length();
-				plv = palavra;
+			if( palavra.length() > maior ) { //aqui verifica se o tamanho da palavra é maior que a variável maior
+				maior = palavra.length(); //se for, então a variável maior recebe o tamanho da palavra
+				plv = palavra; //e a variável plv recebe qual é a palavra
 			}
 		}
 		System.out.println("A palavra mais longa é: " + plv);
