@@ -15,9 +15,10 @@
 function maiorNumero(numeros) {
     let maior = numeros[0];
     numeros.forEach((n) => {
-        if (n > maior) {
+        /*if (n > maior) {
             maior = n;
-        }
+        }*/
+       maior = n > maior ? n : maior 
     });
     return maior;
 }

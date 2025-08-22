@@ -9,13 +9,13 @@
 
 // Versão corrigida e otimizada
 function somaPares(nums) {
-    let newNums = nums.filter(n => n % 2 === 0).reduce((total, valor) => total + valor, 0); // Filtra os números pares
+    let newNums = nums.filter(n => n % 2 === 0).reduce((total, valor) => total + valor, 0); // Filtra os números pares e já faz a soma
     /*if (newNums.length === 0) {
         return 0; // Se não houver pares, retorna 0
     }
     let sum = newNums.reduce((total, value) => total + value, 0); // Soma os pares*/
-    return newNums;
+    return newNums ?? 0;
 }
 
-console.log(somaPares([10, 15, 20, 25]))
+console.log(somaPares([15,4,6,25]))
 
