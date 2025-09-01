@@ -37,6 +37,7 @@ public class SistemaNotasAlunos {
 
         // Cálculo da média de cada aluno
         for (Map.Entry<String, List<Double>> entry : alunos.entrySet()) {
+        	System.out.println(entry);
             String nome = entry.getKey();
             List<Double> notas = entry.getValue();
 

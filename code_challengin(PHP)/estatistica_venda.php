@@ -1,6 +1,6 @@
 <?php
 
-function estatisticaVenda($vendas){
+/*function estatisticaVenda($vendas){
     //Ordenando o array do maior para o menor baseado no valor
     arsort($vendas);
 
@@ -21,7 +21,7 @@ function estatisticaVenda($vendas){
     echo "Vendedor(a) $nomeMaior tem mais vendas; no valor R$ $maiorValor\n";
     echo "Vendedor(a) $nomeMenor tem menos vendas; no valor R$ $menorValor\n";
     echo "A média de vendas é de R$ $media";
-}
+}*/
 
 //✅ Mais claro, reutilizável e fácil de manter.
 function estatisticaVenda($vendas){
