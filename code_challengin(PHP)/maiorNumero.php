@@ -1,14 +1,11 @@
 <?php
 
 function maiorNumero($numeros){
-    $maior = $numeros[0];
-    foreach($numeros as $numero){
-        /*if( $numero > $maior ){
-            $maior = $numero;
-        }*/
-        $maior = $numero > $maior ? $numero : $maior;
-    }
-    return $maior;
+    //ordenando array do maior para o menor
+    rsort($numeros);
+
+    //retornando o maior valor
+    return $numeros[0];
 }
 
 
