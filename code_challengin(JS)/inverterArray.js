@@ -1,9 +1,5 @@
-function inverterArray(vetor){
-    let reverse = []
-    for( i = vetor.length-1; i >= 0; i-- ){
-        reverse.push(vetor[i])
-    }
-    return reverse
+function inverterArray(vetor){    
+    return vetor.reverse()
 }
 
 const frutas = ['maçã', 'banana', 'laranja', 'uva'];
