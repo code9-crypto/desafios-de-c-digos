@@ -13,14 +13,16 @@
 
 //SOLUÇÃO COM A FUNÇÃO FOREACH -> esta é a mais indicada
 function maiorNumero(numeros) {
-    let maior = numeros[0];
+    /*let maior = numeros[0];
     numeros.forEach((n) => {
-        /*if (n > maior) {
+        if (n > maior) {
             maior = n;
-        }*/
+        }
        maior = n > maior ? n : maior 
-    });
-    return maior;
+    });*/
+    
+    let maior = numeros.sort((a, b) => b - a)
+    return maior[0];
 }
 
 console.log(maiorNumero([10,25,3,99,47]))
