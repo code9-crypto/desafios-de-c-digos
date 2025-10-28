@@ -11,7 +11,7 @@ function analisarTexto($frase){
     $frsSemEsp = preg_replace("/\s/", "", $frase);
 
     //invertendo a frase
-    $frsInvert = implode(" ", array_reverse(explode("/\s+/",$frase)));
+    $frsInvert = implode(" ", array_reverse(explode(" ",$frase)));
 
     return [
         "Quantidade de palavras na frase: $qtdPlv",
@@ -25,5 +25,6 @@ $frase = "PHP é incrível para iniciantes";
 $resultado = analisarTexto($frase);
 
 echo implode("\n", $resultado);
+
 
 ?>

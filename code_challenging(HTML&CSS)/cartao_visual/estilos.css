@@ -1,0 +1,37 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #4a90e2, #9013fe);
+    font-family: 'Segoe UI', sans-serif;
+}
+
+
+.card {
+    width: 90%;
+    max-width: 400px;
+}
+
+
+.container{    
+    padding: 2px 16px; 
+    color: white;
+    font-size: 1.5em;
+}
+
+.container span {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.link, .git, .insta {
+    margin-right: 10px;
+    border-radius: 50%;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+/*aqui quando o mouse passar por cima, então aumentará de tamanho*/
+.link:hover, .git:hover, .insta:hover {
+    transform: scale(1.1);
+}
