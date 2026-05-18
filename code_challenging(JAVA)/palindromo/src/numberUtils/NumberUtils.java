@@ -4,20 +4,15 @@ public class NumberUtils {
 
 	public static void main(String[] args) {
 		
-		String numero = "8";
+		String n = "153";		
+		String[] numero = n.split("");		
+		int result = 0;
 		
-		int digits = numero.split("\\s+").length;
-		
-		String[] nums = numero.split("\\s+");
-		
-		int total = 0;
-		
-		for( String n : nums ) {
-			total += Math.pow(Integer.parseInt(n), digits);
+		for( String num : numero ){
+			result += (int) Math.pow(Integer.parseInt(num), n.length()); 
 		}
 		
-		System.out.println(total == Integer.parseInt(numero));
-
+		System.out.println(result == Integer.parseInt(n) ? n + " is narcissistic" : n + " is not narcissistic");
 	}
 
 }

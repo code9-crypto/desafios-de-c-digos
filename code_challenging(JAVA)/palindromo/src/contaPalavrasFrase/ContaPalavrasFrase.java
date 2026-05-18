@@ -19,6 +19,8 @@ public class ContaPalavrasFrase {
         Map<String, Integer> contador = new HashMap<>();
 
         for (String palavra : palavras) {
+            //este comando faz com que se o valor não existe, então atribui o valor 0
+			//mas se existir, atribui o valor +1
             contador.put(palavra, contador.getOrDefault(palavra, 0) + 1);
         }
 

@@ -14,7 +14,8 @@ function ordenaValores($numeros){
     return $numeros;
 }
 
-print_r(ordenaValores([9,4,3,10,15,35]));
+$texto = implode(",", ordenaValores([9,4,3,10,15,35]));
+echo $texto;
 
 
 ?>

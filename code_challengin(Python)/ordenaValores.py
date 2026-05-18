@@ -11,5 +11,7 @@ def ordenacao(numeros):
              numeros[y] = numeros[y+1] # a posição atual recebe o valor da posição seguinte(menor valor)
              numeros[y+1] = temp # a posição seguinte recebe o valor da variável tmp(a qual está com o maior valor)
  print(numeros)
+print(len(numeros))
+
  
 ordenacao(numeros)
